@@ -2,25 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #141d2f; */
   --text-color: #fff;
-  /* color: var(--text-color); */
 }
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 header {
   color: var(--text-color);
-  background-color: purple;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 327px;
+  min-width: 327px;
   height: 38px;
-  background-color: grey;
+  background-color: #0079ff;
+}
+.nav-theme-cnt {
+  display: flex;
+  align-items: center;
 }
