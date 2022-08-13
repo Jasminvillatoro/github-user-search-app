@@ -42,3 +42,41 @@ nav {
   letter-spacing: 2px;
   margin-right: 6px;
 }
+
+/* SearchBar Styles */
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 327px;
+  /* border: 1px solid grey; */
+}
+
+input {
+  width: 327px;
+  height: 60px;
+  background-color: var(--primary-bg);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding-right: 30px;
+}
+
+#input-bg-img {
+  background-image: url('./assets/icon-search.svg');
+  background-position: left 4px center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+form > button {
+  border-radius: 6px;
+  border: none;
+  width: 84px;
+  height: 46px;
+  background-color: #0079ff;
+  color: var(--text-color);
+}
