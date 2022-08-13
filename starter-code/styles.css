@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   --text-color: #fff;
+  --primary-bg: #1e2a47;
 }
 
 body {
@@ -10,21 +11,34 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-header {
+  /* background-color: #f2f2f2; */
+  background-color: #141d2f;
+  font-family: 'Space Mono', monospace, 'sans-serif';
   color: var(--text-color);
+  font-weight: 400;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0.5rem;
   min-width: 327px;
   height: 38px;
-  background-color: #0079ff;
 }
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
 .nav-theme-cnt {
   display: flex;
   align-items: center;
+}
+
+.nav-theme-cnt > h3 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-right: 6px;
 }
