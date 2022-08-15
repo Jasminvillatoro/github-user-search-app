@@ -19,6 +19,10 @@ body {
   font-weight: 400;
 }
 
+header {
+  margin-top: 1.92rem;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -51,6 +55,7 @@ form {
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  margin-top: 2.62rem;
 }
 
 input {
