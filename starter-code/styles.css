@@ -4,6 +4,7 @@
   box-sizing: border-box;
   --text-color: #fff;
   --primary-bg: #1e2a47;
+  --font: 'Space Mono', monospace, 'sans-serif';
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   align-items: center;
   /* background-color: #f2f2f2; */
   background-color: #141d2f;
-  font-family: 'Space Mono', monospace, 'sans-serif';
+  font-family: var(--font);
   color: var(--text-color);
   font-weight: 400;
 }
@@ -47,12 +48,9 @@ nav {
 
 form {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
-
-  width: 327px;
-  /* border: 1px solid grey; */
 }
 
 input {
@@ -60,23 +58,38 @@ input {
   height: 60px;
   background-color: var(--primary-bg);
   border: none;
-  border-radius: 6px;
-  color: #fff;
-  padding-right: 30px;
+  border-radius: 15px;
+  font-family: var(--font);
+  color: var(--text-color);
+  font-size: 0.8rem;
 }
-
+/* styles for the input's background image(search icon) */
 #input-bg-img {
   background-image: url('./assets/icon-search.svg');
-  background-position: left 4px center;
+  background-position: left 12px center;
   background-size: 20px;
   background-repeat: no-repeat;
-  padding-left: 30px;
+  padding-left: 2.5rem;
 }
-form > button {
-  border-radius: 6px;
+
+input::placeholder {
+  color: var(--text-color);
+  font-size: 0.75rem;
+}
+
+input:focus {
+  /* removing the input focus blue box. Put this on the form if you like. */
+  outline: none;
+}
+
+.search-btn {
+  border-radius: 10px;
   border: none;
   width: 84px;
   height: 46px;
   background-color: #0079ff;
   color: var(--text-color);
+  font-family: var(--font);
+  margin-left: -90px;
+  z-index: 1;
 }
