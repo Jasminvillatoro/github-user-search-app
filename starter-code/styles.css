@@ -13,7 +13,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #f2f2f2; */
   background-color: var(--primary-bg);
   font-family: var(--font);
   color: var(--text-color);
@@ -118,7 +117,6 @@ input:focus {
 
 .card-top-user-info {
   display: flex;
-  /* background-color: #ccc; */
 }
 
 .card-top-user-info h2 {
