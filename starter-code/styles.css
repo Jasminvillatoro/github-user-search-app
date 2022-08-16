@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   --text-color: #fff;
-  --primary-bg: #1e2a47;
+  --primary-bg: #141d2f;
+  --secondary-bg: #1e2a47;
   --font: 'Space Mono', monospace, 'sans-serif';
 }
 
@@ -13,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   /* background-color: #f2f2f2; */
-  background-color: #141d2f;
+  background-color: var(--primary-bg);
   font-family: var(--font);
   color: var(--text-color);
   font-weight: 400;
@@ -61,7 +62,7 @@ form {
 input {
   width: 327px;
   height: 60px;
-  background-color: var(--primary-bg);
+  background-color: var(--secondary-bg);
   border: none;
   border-radius: 15px;
   font-family: var(--font);
@@ -98,3 +99,52 @@ input:focus {
   margin-left: -90px;
   z-index: 1;
 }
+
+/* Card styling top portion */
+.card {
+  background-color: var(--secondary-bg);
+  margin-top: 1rem;
+  width: 327px;
+  height: 517px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding-left: 24px;
+}
+
+.card-top-cnt {
+  margin-top: 25px;
+}
+
+.card-top-user-info {
+  display: flex;
+  /* background-color: #ccc; */
+}
+
+.card-top-user-info h2 {
+  font-size: 1rem;
+}
+
+.card-top-user-info h5 {
+  font-size: 0.8rem;
+  color: #0079ff;
+  font-weight: 400;
+}
+
+.card-top-user-info p {
+  font-size: 0.8rem;
+}
+
+.bio {
+  margin-top: 33px;
+  font-size: 0.8rem;
+  line-height: 25px;
+  padding-right: 6px;
+}
+
+#img {
+  border-radius: 50%;
+  height: 70px;
+  margin-right: 18px;
+}
+/* Card styling middle portion */
