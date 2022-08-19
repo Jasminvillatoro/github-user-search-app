@@ -1,4 +1,6 @@
 // DOM Elements
+const form = document.getElementById('form');
+const input = document.querySelector('#input');
 const userImg = document.getElementById('img');
 const actualName = document.querySelector('.name');
 const userName = document.querySelector('.user-name');
@@ -26,15 +28,26 @@ const renderUserData = (data) => {
     data.following === null ? 'Not Available' : data.following;
   userLocation.innerText =
     data.location === null ? 'Not Available' : data.location;
+  websiteLink.innerText =
+    data.blog === ''
+      ? 'Not Available'
+      : data.blog.split('').splice(12).toString().replace(/,/g, '');
+
+  console.log(websiteLink);
   websiteLink.href = data.blog === null ? 'Not Available' : data.blog;
   twitterLink.innerText =
     data.twitter_username === null ? 'Not Available' : data.twitter_username;
   company.innerText = data.company === null ? 'Not Available' : data.company;
 };
 
-fetch('https://api.github.com/users/jasminvillatoro')
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    renderUserData(data);
-  });
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(input);
+  const username = input.value;
+  fetch(`https://api.github.com/users/${username}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      renderUserData(data);
+    });
+});
