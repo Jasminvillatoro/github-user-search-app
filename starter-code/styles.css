@@ -69,7 +69,7 @@ input {
   font-size: 0.8rem;
 }
 /* styles for the input's background image(search icon) */
-#input-bg-img {
+.input-bg-img {
   background-image: url('./assets/icon-search.svg');
   background-position: left 12px center;
   background-size: 20px;
@@ -193,11 +193,15 @@ input:focus {
   height: 20px;
 }
 
-.user-links,
-p,
+.user-links > p,
 a {
   text-decoration: none;
   color: var(--text-color);
+}
+
+.website-link {
+  overflow-wrap: break-word;
+  max-width: 240px;
 }
 
 a:hover {
