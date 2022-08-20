@@ -182,8 +182,8 @@ input:focus {
 }
 
 .user-links {
-  display: flex;
   margin-bottom: 0.8rem;
+  /* background-color: grey; */
 }
 
 .user-links img {
@@ -221,7 +221,6 @@ a:hover {
   /* Card styling top portion */
 
   .card {
-    /* align-items: center; */
     width: 573px;
     padding-left: 40px;
   }
@@ -259,13 +258,26 @@ a:hover {
   }
 
   .user-count-cnt h4 {
-    font-weight: 400;
     font-size: 1rem;
   }
 
   .user-count-cnt span {
-    font-weight: 700;
     font-size: 1.3rem;
     margin-top: 0px;
+  }
+
+  /* Card styling bottom portion */
+
+  .card-bottom {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .user-links {
+    display: flex;
+  }
+  .user-links img {
+    margin-right: 1rem;
   }
 }
