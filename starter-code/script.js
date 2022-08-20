@@ -40,14 +40,22 @@ const renderUserData = (data) => {
   company.innerText = data.company === null ? 'Not Available' : data.company;
 };
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log(input);
-  const username = input.value;
+const getUser = (username) => {
   fetch(`https://api.github.com/users/${username}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
       renderUserData(data);
     });
+};
+
+window.onload = () => {
+  getUser('octocat');
+};
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(input);
+  const username = input.value;
+  getUser(username);
 });
