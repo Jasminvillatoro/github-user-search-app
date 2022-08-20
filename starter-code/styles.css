@@ -28,7 +28,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  min-width: 327px;
+  width: 327px;
   height: 38px;
 }
 
@@ -133,19 +133,17 @@ input:focus {
   font-size: 0.8rem;
 }
 
+#img {
+  border-radius: 50%;
+  height: 70px;
+  margin-right: 18px;
+}
 .bio {
   margin-top: 33px;
   font-size: 0.8rem;
   line-height: 25px;
   padding-right: 6px;
 }
-
-#img {
-  border-radius: 50%;
-  height: 70px;
-  margin-right: 18px;
-}
-
 /* Card styling middle portion */
 
 .card-middle {
@@ -206,4 +204,68 @@ a {
 
 a:hover {
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET 600PX */
+@media (min-width: 600px) {
+  nav {
+    width: 620px;
+  }
+
+  input {
+    width: 573px;
+  }
+
+  /* Card styling top portion */
+
+  .card {
+    /* align-items: center; */
+    width: 573px;
+    padding-left: 40px;
+  }
+
+  .card-top-cnt {
+    margin-top: 48px;
+  }
+
+  .card-top-user-info h2 {
+    font-size: 1.6rem;
+    margin-top: 12px;
+  }
+
+  .card-top-user-info h5 {
+    font-size: 1rem;
+  }
+
+  .card-top-user-info p {
+    font-size: 0.9rem;
+  }
+
+  #img {
+    height: 117px;
+    margin-right: 40px;
+  }
+
+  .bio {
+    font-size: 0.9rem;
+  }
+
+  /* Card styling middle portion */
+
+  .card-middle {
+    width: 493px;
+  }
+
+  .user-count-cnt h4 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .user-count-cnt span {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 0px;
+  }
 }
