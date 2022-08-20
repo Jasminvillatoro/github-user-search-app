@@ -51,12 +51,30 @@ const renderUserData = (data) => {
   company.innerText = data.company === null ? 'Not Available' : data.company;
 };
 
+const invalidUser = () => {
+  userImg.style.display = 'none';
+  actualName.innerText = 'User Not Found';
+  userName.innerText = '';
+  joinDate.innerText = '';
+  reposAmount.innerText = '';
+  followersAmount.innerText = '';
+  followingAmount.innerText = '';
+  userLocation.innerText = '';
+  websiteLink.innerText = '';
+  twitterLink.innerText = '';
+  company.innerText = '';
+};
+
 const getUser = (username) => {
   fetch(`https://api.github.com/users/${username}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
       renderUserData(data);
+    })
+    .catch((err) => {
+      console.log(`${err} ' User Not Found'`);
+      invalidUser();
     });
 };
 
