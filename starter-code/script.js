@@ -15,11 +15,24 @@ const twitterLink = document.querySelector('.twitter-link');
 const company = document.querySelector('.company');
 
 const renderUserData = (data) => {
+  // Helper Function for date formating
+  const dateFormater = () => {
+    let dtFormat = new Intl.DateTimeFormat('en-Us', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    });
+
+    const date = new Date(data.created_at);
+    const formatedDate = dtFormat.format(date);
+    return formatedDate;
+  };
+
   userImg.src = data.avatar_url === null ? 'Not Available' : data.avatar_url;
   actualName.innerText = data.name === null ? 'Not Available' : data.name;
   userName.innerText = data.login === null ? 'Not Available' : '@' + data.login;
   joinDate.innerText =
-    data.created_at === null ? 'Not Available' : data.created_at;
+    data.created_at === null ? 'Not Available' : 'Joined ' + dateFormater();
   bio.innerText = data.bio === null ? 'Bio Not Available' : data.bio;
   reposAmount.innerText = data.public_repos;
   followersAmount.innerText =
@@ -32,8 +45,6 @@ const renderUserData = (data) => {
     data.blog === ''
       ? 'Not Available'
       : data.blog.split('').splice(12).toString().replace(/,/g, '');
-
-  console.log(websiteLink);
   websiteLink.href = data.blog === null ? 'Not Available' : data.blog;
   twitterLink.innerText =
     data.twitter_username === null ? 'Not Available' : data.twitter_username;
@@ -55,7 +66,7 @@ window.onload = () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log(input);
+  // console.log(input);
   const username = input.value;
   getUser(username);
 });
