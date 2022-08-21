@@ -182,8 +182,8 @@ input:focus {
 }
 
 .user-links {
+  display: flex;
   margin-bottom: 0.8rem;
-  /* background-color: grey; */
 }
 
 .user-links img {
