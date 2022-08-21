@@ -274,10 +274,50 @@ a:hover {
     grid-template-columns: 1fr 1fr;
   }
 
-  .user-links {
-    display: flex;
-  }
   .user-links img {
     margin-right: 1rem;
+  }
+}
+
+/* DESKTOP 800PX */
+
+@media (min-width: 800px) {
+  body {
+    margin-top: 155px;
+  }
+  nav {
+    width: 730px;
+  }
+
+  input {
+    width: 730px;
+  }
+
+  /* Card styling top portion */
+
+  .card {
+    width: 730px;
+    padding-left: 55px;
+  }
+
+  #img {
+    margin-right: 55px;
+  }
+
+  .bio {
+    margin-left: 170px;
+  }
+
+  /* Card styling middle portion */
+
+  .card-middle {
+    width: 480px;
+    margin-left: 170px;
+  }
+
+  /* Card styling bottom portion */
+
+  .card-bottom {
+    margin-left: 170px;
   }
 }
