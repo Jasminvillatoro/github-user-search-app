@@ -1,6 +1,7 @@
 // DOM Elements
 const theme = document.querySelector('.theme');
 const body = document.getElementById('body');
+let themeImg = document.querySelector('.theme-img');
 let themeText = document.querySelector('.theme-text');
 const form = document.getElementById('form');
 const input = document.querySelector('#input');
@@ -98,8 +99,10 @@ themeChanger = () => {
 
   if (themeText.innerText === 'LIGHT') {
     themeText.innerText = 'DARK';
+    themeImg.src = './assets/icon-moon.svg';
   } else if (themeText.innerText === 'DARK') {
     themeText.innerText = 'LIGHT';
+    themeImg.src = './assets/icon-sun.svg';
   }
 };
 
