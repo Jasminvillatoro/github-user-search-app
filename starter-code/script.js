@@ -1,4 +1,7 @@
 // DOM Elements
+const theme = document.querySelector('.theme');
+const body = document.getElementById('body');
+let themeText = document.querySelector('.theme-text');
 const form = document.getElementById('form');
 const input = document.querySelector('#input');
 const userImg = document.getElementById('img');
@@ -84,7 +87,20 @@ window.onload = () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  // console.log(input);
   const username = input.value;
   getUser(username);
 });
+
+//Change Theme from dark to light
+
+themeChanger = () => {
+  body.classList.toggle('light');
+
+  if (themeText.innerText === 'LIGHT') {
+    themeText.innerText = 'DARK';
+  } else if (themeText.innerText === 'DARK') {
+    themeText.innerText = 'LIGHT';
+  }
+};
+
+theme.addEventListener('click', themeChanger);
