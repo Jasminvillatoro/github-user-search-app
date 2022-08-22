@@ -231,6 +231,7 @@ a:hover {
   .card {
     width: 573px;
     padding-left: 40px;
+    margin-top: 2rem;
   }
 
   .card-top-cnt {
